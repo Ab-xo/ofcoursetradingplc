@@ -10,9 +10,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: [process.env.CLIENT_URL], // support frontend URL
   credentials: true,
 }));
+
 
 app.use(express.json());
 app.use('/api/auth', authRoutes);
