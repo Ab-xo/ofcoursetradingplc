@@ -5,8 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'build' // 👈 this replaces 'dist'
-  }
+    outDir: 'dist', // ✅ Needed by Render
+  },
   server: {
     // This is used for local development only
     port: 5173,
